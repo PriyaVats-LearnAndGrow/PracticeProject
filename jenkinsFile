@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Get Source Code') {
+            steps {
+               git 'https://github.com/PriyaVats-LearnAndGrow/PracticeProject.git'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                bat script: 'mvn clean install'
+            }
+        }
+         stage('Test Code') {
+            steps {
+                bat script: 'mvn test'
+            }
+        }
+         stage('Report') {
+            steps {
+                // Publish test results
+                junit '**/target/surefire-reports/*.xml'
+            }
+        }
+    }
+
+
+}
