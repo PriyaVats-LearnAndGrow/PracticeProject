@@ -10,7 +10,7 @@ public class LoginSteps {
     @Given("the user is on the login page")
     public void user_is_on_login_page() {
         // Implement code to navigate to the login page
-        System.out.println("Navigated to the login pages");
+        System.out.println("Navigated to the login page");
     }
 
     @When("the user enters a valid username and password")
