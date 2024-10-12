@@ -20,7 +20,7 @@ public class LoginSteps {
         System.out.println("Entered valid username and password");
     }
 
-    @Then("the user is redirected to the homepagee")
+    @Then("the user is redirected to the homepage")
     public void user_is_redirected_to_homepage() {
         // Implement code to check if user is redirected to the homepage
         System.out.println("User is redirected to the homepage");
